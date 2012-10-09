@@ -1,3 +1,4 @@
-
+wp-content/backups
+*.esproj/
 wp-config.php
 wp-content/uploads
