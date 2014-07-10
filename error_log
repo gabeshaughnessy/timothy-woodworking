@@ -1,1 +1,5 @@
 [09-Oct-2012 00:06:01] PHP Warning:  Missing argument 2 for get_the_terms(), called in /home2/gabesima/public_html/timothyswoodworking/wp-content/themes/hoon/archive.php on line 16 and defined in /home2/gabesima/public_html/timothyswoodworking/wp-includes/category-template.php on line 1061
+[27-Dec-2013 13:27:23 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home2/gabesima/public_html/timothyswoodworking/wp-includes/query.php on line 1482
+[27-Dec-2013 13:27:24 UTC] PHP Warning:  stripslashes() expects parameter 1 to be string, array given in /home2/gabesima/public_html/timothyswoodworking/wp-includes/query.php on line 1937
+[04-Jan-2014 08:07:09 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home2/gabesima/public_html/timothyswoodworking/wp-includes/query.php on line 1482
+[04-Jan-2014 08:07:09 UTC] PHP Warning:  stripslashes() expects parameter 1 to be string, array given in /home2/gabesima/public_html/timothyswoodworking/wp-includes/query.php on line 1937

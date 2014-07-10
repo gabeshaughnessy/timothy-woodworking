@@ -1,42 +1,72 @@
-.cpac-column-value-image,
-.column-column-attachment img {
-	padding-right: 5px;
-	padding-bottom: 4px;
-}
-.cpac-divider {
-	display: inline-block;
-	width: 14px;
-	height: 12px;
-	background: transparent url(../images/square.png) no-repeat 50% 7px;
-}
-span.status-open {}
-span.status-closed {
-	color: red;
-}
-
-/* =Comment Counts column
+/* =General
 -------------------------------------------------------------- */
-.column-comment-count a.post-com-count {
-	display: inline-block;
+.cpac-divider {
+  display: inline-block;
+  width: 14px;
+  height: 12px;
+  background: transparent url(../images/square.png) no-repeat 50% 7px;
 }
-.column-comment-count .description a {
-	display: inline-block;
-	height: 16px;
-	line-height: 16px;
-	padding: 3px 5px 3px 22px;
-	margin: 0 4px 4px 0;
-	background: #e4e4e4;
-	border-radius: 3px;
+span.status-closed {
+  color: red;
 }
-.column-comment-count a.cp-approved {	
-	background: #e4e4e4 url(../images/checkmark.png) no-repeat 3px 50%;
+.tablenav.top .cpac-edit {
+  top: 0;
+  display: inline-block;
+  vertical-align: bottom;
 }
-.column-comment-count a.cp-moderated {	
-	background: #e4e4e4 url(../images/comment_edit.png) no-repeat 3px 50%;
+/* =Images Column
+-------------------------------------------------------------- */
+.cpac-column-value-image {
+  display: inline-block;
+  background: transparent;
+  margin-right: 2px;
+  overflow: hidden;
 }
-.column-comment-count a.cp-spam {
-	background: #e4e4e4 url(../images/no.png) no-repeat 3px 50%;	
+.rtl .cpac-column-value-image {
+  margin-left: 2px;
+  margin-right: 0;
 }
-.column-comment-count a.cp-trash {
-	background: #e4e4e4 url(../images/trash.png) no-repeat 3px 50%;
+.cpac-column-value-image img {
+  display: block;
+  margin: 0 auto;
+}
+.column-column-attachment img {
+  padding-right: 5px;
+  padding-bottom: 4px;
+}
+.rtl .column-column-attachment img {
+  padding-left: 5px;
+  padding-right: 0;
+}
+/* =Color Column
+-------------------------------------------------------------- */
+div.cpac-color {
+  line-height: 26px;
+}
+div.cpac-color span {
+  display: block;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #ffffff;
+  float: left;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 12px;
+  min-width: 30px;
+  overflow: hidden;
+  padding: 4px 5px;
+  font-size: 10px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  min-width: 47px;
+  text-align: center;
+}
+.rtl div.cpac-color span {
+  float: right;
+  margin-left: 12px;
+  margin-right: 0;
+}
+/* =Available Sizes column
+-------------------------------------------------------------- */
+div.sizes span.not-available {
+  color: #999;
 }

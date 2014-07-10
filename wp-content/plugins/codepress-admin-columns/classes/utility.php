@@ -1,26 +1,31 @@
 <?php
 
 /**
- * Fix for getting the columns loaded by WordPress SEO Yoast
+ * Admin message
  *
- * The added columns from WordPress SEO by Yoast weren't available on
- * the admin columns settings page. The eason was that class-metabox.php was prevented
- * from loading. This fix will also load this class when admin columns is loaded.
+ * @since 1.5.0
  *
- * @since     1.4.6
+ * @param string $message Message.
+ * @param string $type Update Type.
  */
-function pre_load_wordpress_seo_class_metabox()
-{
-	global $pagenow;
+function cpac_admin_message( $message = '', $type = 'updated' ) {
+	$GLOBALS['cpac_messages'][] = '<div class="cpac_message ' . $type . '"><p>' . $message . '</p></div>';
 
-	if ( 
-		isset($_REQUEST['page']) && 
-		'codepress-admin-columns' == $_REQUEST['page'] && 
-		'options-general.php' == $pagenow && 
-		defined('WPSEO_PATH') && 
-		file_exists(WPSEO_PATH.'admin/class-metabox.php')
-		) {
-		require_once WPSEO_PATH.'admin/class-metabox.php';
-	}
+	add_action( 'admin_notices', 'cpac_admin_notice' );
+	add_action( 'network_admin_notices', 'cpac_admin_notice' );
 }
-add_action( 'plugins_loaded', 'pre_load_wordpress_seo_class_metabox', 0 );
+
+/**
+ * Admin Notice
+ *
+ * This uses the standard CSS styling from WordPress, no additional CSS have to be loaded.
+ *
+ * @since 1.5.0
+ *
+ * @return string Message.
+ */
+function cpac_admin_notice() {
+
+    echo implode( $GLOBALS['cpac_messages'] );
+}
+
