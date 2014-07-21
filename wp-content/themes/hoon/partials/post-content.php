@@ -33,5 +33,5 @@ wp_link_pages( array(
  *
  */
 if ( 'post' == get_post_type() ) :
-	printf( '<div class="posted-in">%s</div>', hoon_posted_in() );
+	//printf( '<div class="posted-in">%s</div>', hoon_posted_in() );
 endif; ?>
