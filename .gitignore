@@ -2,3 +2,4 @@ wp-content/backups
 *.esproj/
 wp-config.php
 wp-content/uploads
+.DS_Store
